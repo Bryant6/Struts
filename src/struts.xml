@@ -4,9 +4,9 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <constant name="struts.i18n.encoding" value="UTF-8">
-
-    </constant>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.multipart.maxSize" value="1024000"
+    
     <package name="basicstruts" extends="struts-default">
         <action name="showProduct" class="action.ProductAction" method="show">
             <result name="show">show.jsp</result>
@@ -14,6 +14,10 @@
 
         <action name="addProduct" class="action.ProductAction" method="add">
             <result name="show">show.jsp</result>
+        </action>
+
+        <action name="upload" class="action.UploadAction" method="upload">
+            <result name="success">success.jsp</result>
         </action>
 
     </package>
